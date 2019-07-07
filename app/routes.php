@@ -15,6 +15,8 @@ function call($controller, $action){
 		break;
 		
 		case 'login':
+			require_once('models/categories.model.php');			
+			require_once('models/offers.model.php');
 			require_once('models/login.model.php');
 			$controller = new LoginController();
 		break;
