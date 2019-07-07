@@ -1,0 +1,115 @@
+.navbar {
+	border-radius:0;
+}
+
+.navbar-collapse {
+	padding-left:0px;
+}
+
+.navbar-inverse {
+	background-color:#0592a6;
+	border:none
+}
+
+.navbar-inverse .navbar-nav > li > a {
+	color:#eee;
+}
+
+.logo {
+	width:100%;
+	margin-top:8px;
+	margin-bottom:8px;
+}
+
+.alignRight {
+	float:right;
+	text-align:right;	
+}
+.alignLeft {
+	float:left;
+	text-align:left;	
+}
+.top30 {
+	padding-top:30px
+}
+
+.black {
+	color:#000;
+	text-decoration:none
+}
+
+.black:hover{
+	color:#ee720d;
+	text-decoration:none
+}
+
+.black:focus{
+	color:#ee720d;
+	text-decoration:none
+}
+
+.largeLogin {
+	font-size:24px
+}
+
+.jumbotron p {
+	font-size:20px
+}
+
+.btn-warning {
+	background-color:#ee720d;
+}
+
+.list-group-item.active {
+	background-color: #0592a6;
+	border-color: #333;
+}
+
+.list-group-item.active:hover {
+	background-color: #0592a6;
+	border-color: #333;
+}
+
+.list-group-item.active:focus {
+	background-color: #0592a6;
+	border-color: #222;
+}
+
+footer {
+	margin-top:40px;
+	padding: 20px 0;
+	background-color: #ee720d;
+	
+}
+
+footer  p{
+    color: #fff;
+}
+
+.fullWidth {
+   width:100%	
+}
+
+.table-striped {
+	width:100%
+}
+
+.paddingRight0 {
+	padding-right:0
+}
+
+.padding8 {
+	padding:8px;	
+}
+
+h2 {margin:0}
+
+textarea {min-height:220px}
+
+.clear {
+	clear:both;
+}
+
+footer a {
+	color:#fff;
+}
