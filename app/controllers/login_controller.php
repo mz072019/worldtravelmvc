@@ -6,7 +6,9 @@ class LoginController
 		if(isset($_SESSION['logedIn']) && $_SESSION['logedIn']==1)
 			require_once('app/views/admin/offers.php');
 		else {
-			$login = Login::checkLogin();	
+			$email = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
+			$sifra = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
+			$login = Login::checkLogin($email, $sifra);	
 			if($login==1) {
 				// Ako je login uspesan redirektuj u admin sekciju
 				$_SESSION['logedIn']=1;
