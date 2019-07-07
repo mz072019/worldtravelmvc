@@ -9,13 +9,22 @@ class Login
 		$this->password  = $password;
 	}
 
-	public static function checkLogin() {		
-		if(isset($_POST['username']) && isset($_POST['password'])){
+	public static function checkLogin($email, $sifra) {		
+		if(isset($email) && isset($sifra)){
 			$db = Db::getInstance();		
-			$req = $db->prepare("SELECT * FROM korisnici WHERE email = ? AND sifra = ?");
-			$req->execute(array($_POST['username'], md5($_POST['password'])));
-			return $req->rowCount();
+			$req = $db->prepare("SELECT * FROM korisnici WHERE email = ? ");
+			$req->execute(array($email));
+			foreach($req->fetchAll() as $user) 
+			{
+				if(password_verify($sifra, $user['sifra']))
+					return 1;
+				else
+					return 0;
+			}
+			
 		}
+		else
+			return 0;
 	}
 }
 ?>
